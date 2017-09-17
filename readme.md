@@ -22,17 +22,17 @@
   The Cards() function takes two integers (0-3 for the first, and 1-13 for the
   second) and translates these to a suit ("Diamonds", "Clubs", "Hearts",
   "Spades") and card number (2-10, and "Jack", "Queen", "King", "Ace" for the
-  #s 1, 11, 12, and 13, respectively). The str() method then return a string
-  that should read "{card number} of {suit}."
+  numbers 1, 11, 12, and 13, respectively). The str() method then return a
+  string that should read "{card number} of {suit}."
 
   The Deck() class contains various functions that use objects of the Card()
   class, including methods that remove a card, create a hand, shuffle and sort
-  the deck, and replace a card.
+  the deck, and replace a missing card. More detailed descriptions of their
+  respective outputs/return values can be found in the code_description file.
 
   The play_war_game() function creates two instances of the Card() class,
   compared the card number, and awards points for whoever has the higher card.
   A tuple of ("winner", int player1 score, int player2 score) is returned.
-
   The show_song() function takes an input, and searches the Apple iTunes API
   using this keyword, returning a song containing something relevant to the
   input. The song name and artist is printed.
