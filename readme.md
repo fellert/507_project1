@@ -2,7 +2,7 @@
 
 <h2>Project Description</h2>
   This project folder contains five  (excluding this one and the pycache):
-
+  <br>
   <ul>
     <li>SI507F17_project1_cards.py: contains code for Cards(), Deck(),
     play_war_game(), and show_song() classes/functions.
