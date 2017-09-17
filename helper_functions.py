@@ -19,7 +19,10 @@ class Song(object):
             self.track_url = None
 
     def __str__(self):
-        return "{} by {} on {} whose URL is {}".format(self.track, self.artist, self.album, self.track_url)
+        return "{} by {} on {} whose URL is {}".format(self.track,
+                                                       self.artist,
+                                                       self.album,
+                                                       self.track_url)
 
     def __repr__(self):
         return "{} | Explicit: {}".format(self.track, self.explicit)
@@ -28,7 +31,8 @@ class Song(object):
         return len(self.album.split())
 
     def num_words_in_name_sans_determiners(self):
-        return len([x for x in self.album.split() if (x.lower() != "the") and (x.lower() != "a")])
+        return len([x for x in self.album.split() if (x.lower() != "the") and
+                   (x.lower() != "a")])
 
     def open_url_for_track(self):
         if self.track_url:
@@ -38,10 +42,13 @@ class Song(object):
 
 
 def random_song(list_of_song_objs):
-    '''Function to get a random song from a list of song objects and return an identifiable tuple about the song'''
+    '''Function to get a random song from a list of song objects and
+    return an identifiable tuple about the song'''
     song_picked = random.choice(list_of_song_objs)
-    print(song_picked.track, song_picked.artist)# just return track name and artist tuple for identification
-    return song_picked # return song object
+    # just return track name and artist tuple for identification
+    print(song_picked.track, song_picked.artist)
+    return song_picked  # return song object
+
 
 def set_up_cache(cache_file_name="CACHE_FILE.txt"):
     try:
@@ -51,6 +58,7 @@ def set_up_cache(cache_file_name="CACHE_FILE.txt"):
     except:
         CACHE_DICTION = {}
     return CACHE_DICTION
+
 
 def params_unique_combination(baseurl, params_d, private_keys=["api_key"]):
     alphabetized_keys = sorted(params_d.keys())
@@ -76,7 +84,6 @@ def get_and_cache_songs(search_term):
         python_resp = json.loads(resp_text)
         CACHE_DICTION[unique_ident] = python_resp
         return CACHE_DICTION[unique_ident]
-
 
 
 if __name__ == '__main__':
