@@ -123,7 +123,7 @@ class RemoveTest(unittest.TestCase):
         # Does not pop any card and runs replace_card on random card
         test_deck.replace_card(Card(2, 5))
         # Length should still be 52 , and Card(2, 5) should only appear once
-        self.assertTrue(len(test_deck.cards) != 53, 'Added a duplicate')
+        self.assertTrue(len(test_deck.cards) == 52, 'Deck not right size')
         card_list = [str(c) for c in test_deck.cards]
         # Double checks that the count of Card(2, 5) is still one.
         self.assertEqual(card_list.count(str(Card(2, 5))), 1,
@@ -181,14 +181,15 @@ class ShowSongTest(unittest.TestCase):
         # String of Song() contains the phrase 'whose URL is'. This tests is
         # the phrase appears only one, indicating that the function returns
         # a single song and not a list.
-        self.assertEqual(str(song).count('whose URL is'), 1)
+        self.assertEqual(str(song).count('whose URL is'), 1,
+                         'More than one song returned')
 
     def test_song_user_input(self):
         # Runs show_song() on 'The Killers'
         song2 = show_song('The Killers')
-        # Checks if anything related to 'The Killers' is returned. This test
-        # fails becuase nothing is returned relating to the input. The code
-        # appears to search through a pre-defined list.
+        # Checks if anything related to the band 'The Killers' is returned.
+        # This test fails becuase nothing is returned relating to the input.
+        # The code appears to search through a pre-defined list.
         self.assertTrue('The Killers' in str(song2),
                         'Returned restult contains no relevant information')
 
