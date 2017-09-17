@@ -3,20 +3,40 @@
 <h2>Project Description</h2>
   This project folder contains five files:
   <ul>
-    <li>SI507F17_project1_cards.py: contains function code</li>
-    <li>SI507F17_project1_tests.py: contains test cased for above</li>
-    <li>code_description_507F17project1.txt: more in-depth Description
-    of functions and supposed output
+    <li>SI507F17_project1_cards.py: contains code for Cards(), Deck(),
+    play_war_game(), and show_song() classes/functions.
+    </li>
+    <li>SI507F17_project1_tests.py: contains test cases for above file.
+    </li>
+    <li>code_description_507F17project1.txt: more in-depth description
+    of functions in SI507F17_project1_cards.py and the expected output.
     </li>
     <li>helper_functions.py: additional functions (not tested)for the
-    show_song() function
+    show_song() function.
     </li>
     <li>requirements.txt: contains short list of required packages that
-    need to be installed prior to running either .py file
+    need to be installed prior to running either .py file.
     </li>
   </ul>
 
-  
+  The Cards() function takes two integers (0-3 for the first, and 1-13 for the
+  second) and translates these to a suit ("Diamonds", "Clubs", "Hearts",
+  "Spades") and card number (2-10, and "Jack", "Queen", "King", "Ace" for the
+  #s 1, 11, 12, and 13, respectively). The str() method then return a string
+  that should read "{card number} of {suit}."
+
+  The Deck() class contains various functions that use objects of the Card()
+  class, including methods that remove a card, create a hand, shuffle and sort
+  the deck, and replace a card.
+
+  The play_war_game() function creates two instances of the Card() class,
+  compared the card number, and awards points for whoever has the higher card.
+  A tuple of ("winner", int player1 score, int player2 score) is returned.
+
+  The show_song() function takes an input, and searches the Apple iTunes API
+  using this keyword, returning a song containing something relevant to the
+  input. The song name and artist is printed.
+
 
 <h2>Getting started/Installation:</h2>
   This program runs using python 3.6, so the user must have this version
@@ -29,9 +49,8 @@
   file, and can be installed using the pip install -r requirements.txt command.
 
 <h2>Running the Tests:</h2>
-  The code for the Cards(), Deck(), play_war_game(), and show_song() is in the
-  SI507F17_project1_cards.py file. Running this (using python3) will
-  display the scores of each player from the war game, who won (or if there was
+  Running the file SI507F17_project1_cards (using python3) will display the
+  scores of each player from the war game, who won (or if there was
   a tie), and the name of the song an artist retrieved from the show_song()
   function. A window will open to iTunes.com as well, displaying the
   song, artist, and album for the object returned.
