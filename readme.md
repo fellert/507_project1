@@ -23,19 +23,21 @@
   second) and translates these to a suit ("Diamonds", "Clubs", "Hearts",
   "Spades") and card number (2-10, and "Jack", "Queen", "King", "Ace" for the
   numbers 1, 11, 12, and 13, respectively). The str() method then return a
-  string that should read "{card number} of {suit}."
+  string that should read "{card number} of {suit}" (for example, the "King
+  of Hearts", or the "5 of Clubs").
 
   The Deck() class contains various functions that use objects of the Card()
-  class, including methods that remove a card, create a hand, shuffle and sort
+  class, including methods that remove a card (using the pop method),
+  create a hand (of size indicated by user input), shuffle and sort
   the deck, and replace a missing card. More detailed descriptions of their
   respective outputs/return values can be found in the code_description file.
 
   The play_war_game() function creates two instances of the Card() class,
-  compared the card number, and awards points for whoever has the higher card.
-  A tuple of ("winner", int player1 score, int player2 score) is returned.
-  The show_song() function takes an input, and searches the Apple iTunes API
-  using this keyword, returning a song containing something relevant to the
-  input. The song name and artist is printed.
+  compares the card number, and awards points to the player who has the
+  higher card. A tuple of ("winner", int player1 score, int player2 score)
+  is returned. The show_song() function takes an input, and searches the
+  Apple iTunes API using this keyword, returning a song containing something
+  relevant to the input. The song name and artist is printed.
 
 
 <h2>Getting started/Installation:</h2>
@@ -46,7 +48,8 @@
   just forked to the to this folder using the git clone <url> command.
 
   The packages required to run the programs are listed in the requirements.txt
-  file, and can be installed using the pip install -r requirements.txt command.
+  file (included in the folder), and can be installed using the
+  pip install -r requirements.txt command.
 
 <h2>Running the Tests:</h2>
   Running the file SI507F17_project1_cards (using python3) will display the
