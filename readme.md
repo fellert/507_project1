@@ -1,8 +1,9 @@
-SI507 - Project 1
+<h1>SI507 - Project 1</h1>
+
+<h2>Project Description</h2>
 
 
-
-Getting started/Installation:
+<h2>Getting started/Installation:</h2>
   This program runs using python 3.6, so the user must have this version
   installed prior to use. All of the files can be found on GitHub under
   the fellert/507_project1 repository. Fork this folder to your GitHub account,
